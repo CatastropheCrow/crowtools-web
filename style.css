@@ -30,6 +30,7 @@ div {
 
 b {
   margin: 0.5em;
+  user-select: none;
 }
 
 textarea {

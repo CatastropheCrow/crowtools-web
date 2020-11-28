@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", e => {
 
   english.addEventListener("input", e => encoded.value = crow(english.value));
   encoded.addEventListener("input", e => english.value = crow(encoded.value, true));
-  english.addEventListener("focus", e => arrow.innerText = "🠆");
-  encoded.addEventListener("focus", e => arrow.innerText = "🠄");
+  english.addEventListener("focus", e => {arrow.innerText = "🠆"; arrow.style = ""});
+  encoded.addEventListener("focus", e => {arrow.innerText = "🠄"; arrow.style = ""});
 });
