@@ -1,0 +1,44 @@
+body {
+  font-family: "Ubuntu Mono", monospace;
+  background-color: #1c1a1a;
+  overflow-x: hidden;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+h1, h2, b {
+  color: #ba7d24;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+div {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}
+
+b {
+  margin: 0.5em;
+}
+
+textarea {
+  resize: none;
+  width: 30vw;
+  height: max(30vh, 15em);
+  background-color: #1c1a1a;
+  border: 2px solid #ba7d24;
+  color: #927c10;
+  outline: none;
+}
