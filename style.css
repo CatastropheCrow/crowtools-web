@@ -36,7 +36,7 @@ b {
 }
 
 div h2 {
-  width: 30vw;
+  width: calc(30vw + 8px);
   text-align: center;
 }
 
