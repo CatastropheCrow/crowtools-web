@@ -6,6 +6,9 @@ body {
   color: white;
   margin-left: 1em;
   margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1, h2, b {
@@ -21,16 +24,20 @@ h2 {
 }
 
 div {
-  display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4em;
 }
 
 b {
+  font-size: 4em;
   margin: 0.5em;
   user-select: none;
+}
+
+div h2 {
+  width: 30vw;
+  text-align: center;
 }
 
 textarea {

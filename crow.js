@@ -9,10 +9,7 @@ function crow(text, decode) {
 document.addEventListener("DOMContentLoaded", e => {
   const english = document.querySelector("textarea:first-child");
   const encoded = document.querySelector("textarea:last-child");
-  const arrow = document.querySelector("b");
 
   english.addEventListener("input", e => encoded.value = crow(english.value));
   encoded.addEventListener("input", e => english.value = crow(encoded.value, true));
-  english.addEventListener("focus", e => {arrow.innerText = "🠆"; arrow.style = ""});
-  encoded.addEventListener("focus", e => {arrow.innerText = "🠄"; arrow.style = ""});
 });
