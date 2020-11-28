@@ -7,12 +7,12 @@ function crow(text, decode) {
 };
 
 document.addEventListener("DOMContentLoaded", e => {
-  const encoded = document.querySelector("textarea:first-child");
-  const english = document.querySelector("textarea:last-child");
+  const english = document.querySelector("textarea:first-child");
+  const encoded = document.querySelector("textarea:last-child");
   const arrow = document.querySelector("b");
 
-  encoded.addEventListener("input", e => english.value = crow(encoded.value, true));
   english.addEventListener("input", e => encoded.value = crow(english.value));
-  encoded.addEventListener("focus", e => arrow.innerText = "🠆");
-  english.addEventListener("focus", e => arrow.innerText = "🠄");
+  encoded.addEventListener("input", e => english.value = crow(encoded.value, true));
+  english.addEventListener("focus", e => arrow.innerText = "🠆");
+  encoded.addEventListener("focus", e => arrow.innerText = "🠄");
 });
