@@ -75,6 +75,10 @@ button {
   border-bottom: 2px solid #ba7d24;
 }
 
+.sharp span {
+  top: 2px;
+}
+
 button:first-child {
   border-left: 2px solid #ba7d24;
 }
@@ -90,4 +94,8 @@ button span {
 button:active span {
   top: 2px;
   opacity: 0.7;
+}
+
+.sharp:active span {
+  top: 4px;
 }
