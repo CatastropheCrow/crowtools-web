@@ -72,7 +72,8 @@ button {
   width: 3em;
   height: 5em;
   outline: none;
-  margin-bottom: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 .sharp {
@@ -98,9 +99,49 @@ button span {
 
 button:active span {
   top: 2px;
-  opacity: 0.7;
+  opacity: .7;
 }
 
 .sharp:active span {
   top: 4px;
+}
+
+div:last-child {
+  margin-top: 1em;
+}
+
+table {
+  border-spacing: 2px 5px;
+}
+
+td:not(:first-child) {
+  width: 1em;
+  border: 2px solid transparent;
+}
+
+tr td:first-child {
+  font-weight: bold;
+}
+
+th:not(:first-child) {
+  border-bottom: 2px solid #ba7d24;
+}
+
+td:first-child {
+  border-right: 2px solid #ba7d24;
+  padding-right: 6px;
+}
+
+tr {
+  height: 1.5em;
+}
+
+td.yselected {
+  border-left: 2px solid #ba7d24;
+  border-right: 2px solid #ba7d24;
+}
+
+td.xselected ~ td {
+  border-top: 2px solid #ba7d24;
+  border-bottom: 2px solid #ba7d24;
 }

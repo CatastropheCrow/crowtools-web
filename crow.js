@@ -15,4 +15,13 @@ document.addEventListener("DOMContentLoaded", e => {
 
   const synth = new Tone.Synth().toDestination();
   document.querySelectorAll("button").forEach(b => b.addEventListener("click", e => synth.triggerAttackRelease(b.innerText.split("\n")[2], "8n")));
+
+  document.querySelectorAll("th").forEach(h => {if (h.innerText != "") h.addEventListener("click", e => {
+    document.querySelectorAll(".yselected").forEach(o => o.classList.remove("yselected"));
+    document.querySelectorAll(`td:nth-child(${[...h.parentElement.children].indexOf(h) + 1})`).forEach(o => o.classList.add("yselected"))
+  })});
+  document.querySelectorAll("td:first-child").forEach(h => h.addEventListener("click", e => {
+    document.querySelectorAll(".xselected").forEach(o => o.classList.remove("xselected"));
+    h.classList.add("xselected");
+  }));
 });
