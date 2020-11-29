@@ -15,6 +15,11 @@ h1, h2, b, button, div {
   color: #ba7d24;
 }
 
+::placeholder {
+  color: #5c4f14;
+  opacity: 1;
+}
+
 h1 {
   font-size: 5em;
 }
