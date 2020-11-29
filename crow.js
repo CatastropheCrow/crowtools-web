@@ -6,6 +6,21 @@ function crow(text, decode) {
     return text.split("").map(thea => nils[thea] || thea).join("");
 };
 
+function vigenere(digits, pass) {
+    digits = digits.replace(/\D/g, "");
+    if (!digits) return "&nbsp;";
+    pass = pass.toUpperCase().replace(/[^A-Z]/g, "");
+    if (!pass) return "&nbsp;";
+
+    pass = pass.repeat(Math.ceil(digits.length/pass.length)).split("");
+
+    return digits.split("").map((digit, index) => {
+      if (digit == "0") digit = "10";
+      digit = parseInt(digit);
+      return document.querySelector(`tr:nth-child(${digit}) td:nth-child(${pass[index].charCodeAt(0) - 63})`).innerText.toUpperCase();
+    }).join("");
+};
+
 document.addEventListener("DOMContentLoaded", e => {
   const english = document.querySelector("textarea:first-child");
   const encoded = document.querySelector("textarea:last-child");
@@ -16,7 +31,7 @@ document.addEventListener("DOMContentLoaded", e => {
   const synth = new Tone.Synth().toDestination();
   document.querySelectorAll("button").forEach(b => b.addEventListener("mousedown", e => synth.triggerAttackRelease(b.innerText.split("\n")[2], "8n")));
 
-  document.querySelectorAll("th").forEach(h => {if (h.innerText != "") h.addEventListener("click", e => {
+  document.querySelectorAll("th").forEach(h => {if (h.innerText) h.addEventListener("click", e => {
     document.querySelectorAll(".yselected").forEach(o => o.classList.remove("yselected"));
     document.querySelectorAll(`td:nth-child(${[...h.parentElement.children].indexOf(h) + 1})`).forEach(o => o.classList.add("yselected"));
   })});
@@ -24,4 +39,10 @@ document.addEventListener("DOMContentLoaded", e => {
     document.querySelectorAll(".xselected").forEach(o => o.classList.remove("xselected"));
     h.classList.add("xselected");
   }));
+
+  const digits = document.querySelector("#digits");
+  const pass = document.querySelector("#pass");
+  const result = document.querySelector("p");
+  digits.addEventListener("input", e => result.innerHTML = vigenere(digits.value, pass.value));
+  pass.addEventListener("input", e => result.innerHTML = vigenere(digits.value, pass.value));
 });

@@ -56,7 +56,15 @@ textarea {
   outline: none;
 }
 
-.music {
+input {
+  width: 10vw;
+  background-color: #1c1a1a;
+  border: 2px solid #ba7d24;
+  color: #927c10;
+  outline: none;
+}
+
+.title {
   width: 66vw;
 }
 
@@ -112,6 +120,7 @@ div:last-child {
 
 table {
   border-spacing: 2px 5px;
+  margin-bottom: 1em;
 }
 
 td:not(:first-child) {
@@ -148,4 +157,19 @@ td.xselected ~ td {
 
 td:first-child, th:not(:first-child) {
   cursor: pointer;
+}
+
+label {
+  margin-left: 1em;
+  margin-right: .2em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
