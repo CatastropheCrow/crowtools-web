@@ -145,3 +145,7 @@ td.xselected ~ td {
   border-top: 2px solid #ba7d24;
   border-bottom: 2px solid #ba7d24;
 }
+
+td:first-child, th:not(:first-child) {
+  cursor: pointer;
+}
