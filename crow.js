@@ -12,4 +12,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
   english.addEventListener("input", e => encoded.value = crow(english.value));
   encoded.addEventListener("input", e => english.value = crow(encoded.value, true));
+
+  const synth = new Tone.Synth().toDestination();
+  document.querySelectorAll("button").forEach(b => b.addEventListener("click", e => synth.triggerAttackRelease(b.innerText.split("\n")[2], "8n")));
 });

@@ -11,7 +11,7 @@ body {
   align-items: center;
 }
 
-h1, h2, b {
+h1, h2, b, button {
   color: #ba7d24;
 }
 
@@ -27,6 +27,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 b {
@@ -48,4 +49,36 @@ textarea {
   border: 2px solid #ba7d24;
   color: #927c10;
   outline: none;
+}
+
+.music {
+  width: 66vw;
+}
+
+button {
+  font: inherit;
+  display: block;
+  background-color: #1c1a1a;
+  border-left: 1px solid #ba7d24;
+  border-right: 1px solid #ba7d24;
+  border-top: 2px solid #ba7d24;
+  border-bottom: 0;
+  cursor: pointer;
+  width: 3em;
+  height: 5em;
+  outline: none;
+  margin-bottom: 1em;
+}
+
+.sharp {
+  border-top: 0;
+  border-bottom: 2px solid #ba7d24;
+}
+
+button:first-child {
+  border-left: 2px solid #ba7d24;
+}
+
+button:last-child {
+  border-right: 2px solid #ba7d24;
 }
