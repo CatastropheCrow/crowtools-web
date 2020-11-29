@@ -88,5 +88,6 @@ button span {
 }
 
 button:active span {
-  top: 1px;
+  top: 2px;
+  opacity: 0.7;
 }
