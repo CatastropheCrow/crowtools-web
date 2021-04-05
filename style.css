@@ -22,6 +22,7 @@ h1, h2, b, button, div {
 
 h1 {
   font-size: 5em;
+  margin-bottom: 0;
 }
 
 h2 {
